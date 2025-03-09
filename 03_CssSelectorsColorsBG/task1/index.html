@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- id selectoru -->
+    <h1> id selectoru </h1>
+    <div id="id">id ile</div>
+
+    <!-- class selectoru -->
+    <h1> class selectoru </h1>
+    <div class="class">class ile</div>
+
+    <!-- Descendant combinator (space) "element selectoru(arasinda space)" -->
+    <h1>Descendant combinator (space)</h1>
+    <h4>h4 ile</h4>
+
+    <!-- Child combinator (>) -->
+    <h1>Child combinator (>) </h1>
+    <div>
+        <span>
+            <p> WRONG child combinator(spanin icinde olduguna gore)</p>
+        </span>
+        <p>RIGHT child combinator(birbasa div'in icinde olduguna gore)</p>
+    </div>
+
+    <!-- Next sibling combinator (+) -->
+    <h1>Next sibling combinator (+)</h1>
+    <div>
+        <p>div'in icinde paraqraf</p>
+    </div>
+
+    <p>divdan sonra gelen 1ci paraqraf</p>
+    <p>divdan sonra gelen 2ci paraqraf</p>
+
+    <div>men div'am</div>
+    <p>men 1ci paraqraf'am</p>
+    <p>men 2ci paraqraf'am</p>
+
+    <!-- Subsequent-sibling combinator (~) -->
+    <h1>Subsequent-sibling combinator (~)</h1>
+
+    <h3>h3un icinde her hansisa cumle</h3>
+    <h4>h4un icinde bir cumle</h4>
+
+    <div>
+        <p>div'in icinde paraqraf</p>
+    </div>
+
+    <p>divdan sonra 1ci paraqraf</p>
+    <h5>h5in icinde bir cumle</h5>
+    <p>divdan sonra 2ci paraqraf</p>
+
+
+    <!-- [attribute] selector -->
+    <h1> [attribute] selector</h1>
+
+    <a href="instagram.com" target="_top">instagram</a>
+    <a href="youtube.com">youtube</a>
+    <a href="google.com" target="_blank">google</a>
+
+
+    <!-- [attribute="value"] Selector -->
+    <h1>[attribute="value"] Selector </h1>
+    <a href="instagram.com" target="_top">instagram</a>
+    <a href="youtube.com">youtube</a>
+    <a href="google.com" target="_blankk">google</a>
+
+
+    <!-- [attribute~="value"] Selector -->
+    <h1>[attribute~="value"] Selector</h1>
+    <a href="instagram.com" target="bla _top">instagram</a>
+    <a href="youtube.com" target="_lala bla">youtube</a>
+    <a href="google.com" target="_blankk">google</a>
+
+    <!-- [attribute^="value"] Selector -->
+    <h1>[attribute^="value"] Selector</h1>
+    <a href="instagram.com" target="bla .com>instagram</a>
+     <a href=" youtube.com" target=" #_lala">youtube</a>
+    <a href="google.com" target="#_blankk .com">google</a>
+
+    <!-- [attribute$=value] Selector -->
+    <h1>[attribute$=value] Selector</h1>
+    <a href="instagram.com" target="bla .com>instagram</a>
+    <a href=" youtube.com" target="bla _lala">youtube</a>
+    <a href="google.com" target="_blankk .com">google</a>
+
+    <!-- :first-child and :last-child Pseudo-class -->
+    <h1>:first-child and :last-child Pseudo-class</h1>
+    <ul>
+        <li>1ci li</li> <!-- amma meselen burada li yerine "p" qoysam islemez cunki cssde sirf 1ci li'ni secmisem -->
+        <li>2ci li</li>
+        <li>3cu li</li>
+    </ul>
+
+    <!-- :nth-child() Pseudo-class -->
+    <h1>:nth-child() Pseudo-class</h1>
+    <ul>
+        <li>1ci li</li>
+        <li>2ci li</li>
+        <li>3ci li</li>
+        <li>4cu li</li>
+    </ul>
+
+    <!-- :not() Pseudo-class -->
+    <h1>:not() Pseudo-class</h1>
+
+    <h5>men h5'em</h5>
+    <p>men paraqrafam</p>
+    <span>men span'am</span>
+    <p class="prq">men "prq" classi ile paraqrafam</p>
+    <p>men paraqrafam</p>
+
+    <!-- :hover Pseudo-class -->
+    <h1>:hover Pseudo-class</h1>
+    <button class="button1">button1</button>
+
+    <!-- :focus Pseudo-class -->
+    <h1>:focus Pseudo-class</h1>
+    <button class="button2">button2</button>
+
+    <!-- :active Pseudo-class -->
+    <h1>:active Pseudo-class</h1>
+    <button class="button3">button3</button>
+
+    <!-- :link Pseudo-class -->
+    <!-- :visited Pseudo-class -->
+    <h1>:visited Pseudo-class</h1>
+    <a href="instagram.com" target="..">instagram</a>
+    <a href="youtube.com">youtube</a>
+
+</body>
+
+</html>

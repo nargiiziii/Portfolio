@@ -1,0 +1,117 @@
+h1 {
+  font-size: 30px;
+}
+
+/* 1) butun elementleri deyisir */
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* 2) id olan yazi goy olacaqdir */
+#id {
+  background-color: aqua;
+}
+
+/* 3) class olan yazi sari olacaqdir */
+.class {
+  background-color: yellow;
+}
+
+/* 4) "Descendant combinator (space)" yeni element selectoru(arasinda space) */
+h4 {
+  background-color: red;
+}
+
+/* 5) "Child combinator (>)" yeni yalniz div'in icinde olan paraqrafi gorecek*/
+
+div > p {
+  background-color: blueviolet;
+}
+
+/* 6) "Next sibling combinator (+)" yeni ki yalniz divdan sonra gelen paraqrafi gorecek */
+
+div + p {
+  background-color: cadetblue;
+}
+
+/* 7) Subsequent-sibling combinator (~) yeni ki divdan sonra gelen butun paraqraflara tesir edecek by style */
+
+div ~ p {
+  background-color: chartreuse;
+}
+
+/* 8) [attribute] selector yeniki konkret qeyd olunan atributu olan her yere style verir*/
+
+a[target] {
+  border: 2px solid red;
+}
+
+/* 9) [attribute="value"] selector yeniki sirf atributun valuesi ile goturulur ve style verilir*/
+
+a[target="_blankk"] {
+  border: 2px solid yellow;
+}
+
+/* 10) [attribute~="value"] Selector yeniki sirf verilen value ile olan yerlere style verir (meselen mende "bla" sozu valuede olan yerlere style verecek) */
+
+a[target~="bla"] {
+  border: 2px solid green;
+}
+
+/* 11) [attribute^="value"] Selector yeniki sirf qeyd olunan value ile baslanan yerlere style verilecek(meselen mende "#" ile baslayan yerlere style verecek) */
+a[href^="#"] {
+  border: 2px solid rgb(18, 90, 191);
+}
+
+/* 12) [attribute$=value] Selector yeniki valuenin hansi soz ile bitdiyinden asili olaraq style verir(meselen mende ".com" ile bitene style verecek) */
+
+a[href$=".com"] {
+  border: 2px solid rgb(185, 45, 59);
+}
+
+/* 13) ve 14) :first-child and :last-child Pseudo-class yeniki secdiyin elementden(birinci ya sonuncu) asili olaraq style verir*/
+
+li:first-child {
+  background-color: darkorange;
+}
+
+li:last-child {
+  background-color: darkred;
+}
+
+/* 15) :nth-child() Pseudo-class yeniki ardiciliqda hansi reqemde olani sececeyini deyir*/
+
+li:nth-child(3) {
+  background-color: rgb(119, 250, 160);
+}
+
+/* 16) :not() Pseudo-class yeniki "prq" classi olmayan butun p elementlerine bu style verilecek */
+p:not(.prq) {
+  background-color: rgb(182, 31, 129);
+}
+
+/* 17) :hover Pseudo-class yeniki element üzərinə gəlindikdə style pnu deyisir */
+button.button1:hover {
+  background-color: rgb(167, 37, 37);
+}
+
+/* 18) :focus Pseudo-classyeniki klikleyende element style'i deyisir klik zamani sonra ekranin basqa yerine klikleyende itir reng */
+button.button2:focus {
+  background-color: aqua;
+}
+
+/* 19) :active Pseudo-class yeniki element klik edildikdən sonra style deyisir ve aktiv oldugu zaman elede qalir rengi */
+button.button3:active {
+  background-color: black;
+}
+
+/* 20) :link Pseudo-class yeniki elemente linke kecid etmemisden qabaq olan style */
+/* 21) :visited Pseudo-class yeniki elemente link verildikden sonra style deyisir */
+a:link {
+  color: rgb(1, 126, 61);
+}
+
+a:visited {
+  color: red; /* Посещённые ссылки */
+}
+

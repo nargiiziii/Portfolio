@@ -1,0 +1,21 @@
+.scroll-img {
+    height: 100vh; /* 100 viewport height yeniki ekranin uzunlugunun 100 faizine gore durur element */
+    width: 65vw; /* 50 viewport width yeniki ekranin eninin 50 faizine gore durur element */
+    overflow-y: scroll; /* sirf y terefde(yuxardan asagi) scroll eliye bilim deye metni(чтобы появился ползунок) */
+    border: 20px solid black;
+    margin: auto; /* centerde olsun deye */
+    margin-top: 150px; 
+    background-image: url("image/nature.webp");  
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+    text-align: center;
+}
+
+
