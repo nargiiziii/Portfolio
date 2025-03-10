@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("../task-4-gif/image/shark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  background-color: rgba(137, 132, 132, 0.504);
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  text-align: center;
+  color: #000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.author {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: start;
+}

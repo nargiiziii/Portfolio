@@ -17,6 +17,10 @@
         border-collapse: collapse;
         /* collapse - убирает пробелы между ячейками */
     }
+
+    td, th {
+        padding: 7px;
+    }
 </style>
 
 <body>
@@ -213,12 +217,10 @@
         <tr>
             <th>2</th>
             <th>book</th>
-            <th></th>
         </tr>
         <tr>
             <th>3</th>
             <th>dust</th>
-            <th></th>
         </tr>
     </table>
 
@@ -276,7 +278,97 @@
 
     <!-- table 10  -->
 
+    <table border="1">
+        <tr>
+            <td rowspan="2">A</td>
+            <td>B</td>
+            <td rowspan="3" colspan="2">D</td>
+            <td colspan="2">E</td>
+            <td colspan="3">F</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td rowspan="2">G</td>
+            <td rowspan="2">H</td>
+            <td rowspan="2">I</td>
+        </tr>
+        <tr>
+            <td colspan="2">J</td>
+        </tr>
+        <tr>
+            <td colspan="4">K</td>
+            <td colspan="1">L</td>
+            <td colspan="2">M</td>
+        </tr>
+    </table>
 
+    <hr style="border: 1px solid black;">
+
+
+    <!-- table 11  -->
+
+    <table border="1" cellspacing="0">
+        <caption>TIME TABLE</caption>
+        <tr>
+            <th>Day/Period</th>
+            <th>I<br>9:30-10:20</th>
+            <th>II<br>10:20-11:10</th>
+            <th>III<br>11:10-12:00</th>
+            <th rowspan="7">L<br>U<br>N<br>C<br>H</th>
+            <th>IV<br>12:40-1:30</th>
+            <th>V<br>1:30-2:20</th>
+            <th>VI<br>2:20-3:10</th>
+            <th>VII<br>3:10-4:00</th>
+        </tr>
+        <tr>
+            <th>Monday</th>
+            <td>Eng</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td colspan="3">LAB</td>
+            <td>Phy</td>
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td colspan="3">LAB</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td>SPORTS</td>
+        </tr>
+        <tr>
+            <th>Wednesday</th>
+            <td>Mat</td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LIBRARY</td>
+        </tr>
+        <tr>
+            <th>Thursday</th>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LAB</td>
+            <td>Mat</td>
+        </tr>
+        <tr>
+            <th>Friday</th>
+            <td colspan="3">LAB</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td>Eng</td>
+            <td>Phy</td>
+        </tr>
+        <tr>
+            <th>Saturday</th>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td colspan="3">SEMINAR</td>
+            <td colspan="2">SPORTS</td>
+        </tr>
+    </table>
 
 </body>
 
