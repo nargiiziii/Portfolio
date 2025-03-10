@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.first-row, .second-row {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+
+p.first {
+    width: 250px;
+border: 10px solid;
+border-image: linear-gradient(to right, rgb(66, 234, 223), rgb(16, 202, 140), rgb(50, 233, 172)) 1;
+padding: 40px;
+}
+
+p.second {
+    width: 250px;
+    border: 10px solid;
+    border-left: 0;
+    border-right: 0;
+    border-image: linear-gradient(to right, rgb(66, 234, 223), rgb(16, 202, 140), rgb(50, 233, 172)) 1;
+    padding: 40px;
+}
+
+p.third {
+    width: 250px;
+    border: 10px solid;
+    border-top: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(to right, rgb(66, 234, 223), rgb(16, 202, 140), rgb(50, 233, 172)) 1;
+    padding: 40px;
+}
+
+p.fourth {
+    width: 250px;
+    border: 10px solid;
+    border-radius: 30px;  /* BU NIYE ISLEMIR, BORDER RADIUS VERMISEM */
+    border-image: linear-gradient(to right, rgb(66, 234, 223), rgb(16, 202, 140), rgb(50, 233, 172)) 1;
+    padding: 40px;
+}

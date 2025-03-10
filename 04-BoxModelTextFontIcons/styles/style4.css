@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "font";
+  src: url(../fonts/PinyonScript-Regular.ttf);
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 600px;
+}
+
+h3 {
+  width: 100%;
+  color: rgb(78, 78, 202);
+}
+
+p.font1 {
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  text-align: justify; /* qazetlerde oldugun kimi tam hisseni tutub teksti yayir polniy */
+  width: 500px;
+}
+
+p.font2 {
+  font-family: font;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: justify; /* qazetlerde oldugun kimi tam hisseni tutub teksti yayir polniy */
+  width: 500px;
+}

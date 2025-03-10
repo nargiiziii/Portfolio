@@ -1,0 +1,44 @@
+p {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    line-height: 2;
+}
+
+.first-row, .second-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.green {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(75, 177, 75);
+    border: 5px solid red;  
+    border-radius: 90px;  
+}
+
+.orange {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 165, 0);
+    border: 5px solid red;  
+    border-radius: 25% 10%;  
+}
+
+.light-blue {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(104, 230, 247);
+    border: 5px solid red;  
+    border-radius: 35px 10em 10%;  
+}
+
+.dark-blue {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(88, 157, 190);
+    border: 5px solid red;  
+    border-radius: 50px 50% 50cm 50em;  
+}
