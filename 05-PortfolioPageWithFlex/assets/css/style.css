@@ -224,6 +224,8 @@ p {
   color: #1a252f;
 }
 
+/* CONTACT */
+
 #contact-section {
   padding: 9.6rem;
 }
@@ -284,6 +286,8 @@ button {
   font-size: 1.9rem;
   color: white;
 }
+
+/* FOOTER */
 
 #footer {
   height: 30rem;
