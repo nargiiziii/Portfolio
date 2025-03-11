@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* ekranin uzunlugu qeder uzunluq verir */
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: orange;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.282);
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+select {
+    width: 250px;
+    height: 60px;
+    font-size: 15px;
+    border: 1px solid #000;
+    background-color: rgb(73, 73, 109);
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+
+option {
+    font-size: 18px;
+    background-color: rgb(73, 73, 109);
+    color: #fff;
+}

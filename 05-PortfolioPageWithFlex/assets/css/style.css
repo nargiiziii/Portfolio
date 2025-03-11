@@ -1,0 +1,369 @@
+.container {
+  max-width: 132rem;
+  margin: 0 auto;
+}
+
+#navbar {
+  background-color: #2c3e50;
+  height: 10.4rem;
+  color: white;
+}
+
+.top {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.nav .list {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav .list li {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #1abc9c;
+}
+
+/* MAIN */
+
+#main-header-section {
+  height: 63rem;
+  background-color: #1ab99a;
+}
+
+.first-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  color: white;
+}
+
+.first-section .image {
+  width: 27rem;
+  height: 27rem;
+}
+
+.firts-head {
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+#main-header-section .star-place {
+  display: flex;
+  gap: 1rem;
+}
+
+#main-header-section .white-star-line {
+  width: 11.2rem;
+  height: 0.4rem;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.fisrt-p {
+  font-size: 2.4rem;
+}
+
+/* PORTFOLIO */
+
+#portfolio-section {
+  padding: 9.6rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+#portfolio-section .star-place {
+  display: flex;
+  gap: 1rem;
+}
+
+#portfolio-section .black-star-line {
+  width: 11.2rem;
+  height: 0.4rem;
+  border-radius: 3rem;
+  background-color: black;
+}
+
+.card-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 4rem;
+}
+
+.card-item .card {
+  width: 40rem;
+  height: 29rem;
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.card:hover {
+  z-index: 1;
+  background-color: #1ab99a;
+}
+
+/* ABOUT */
+
+#about-section {
+  height: 60rem;
+  background-color: #1ab99a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-place {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#about-section .star-place {
+  display: flex;
+  gap: 1rem;
+}
+
+#about-section .white-star-line {
+  width: 11.2rem;
+  height: 0.4rem;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+#about-section p {
+  font-size: 2rem;
+}
+
+#about-section .info {
+  width: 85rem;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  gap: 7rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.button {
+  width: 20rem;
+  height: 5.5rem;
+  border: 0.2rem solid white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button:hover {
+  background-color: white;
+  color: #1a252f;
+}
+
+.button i {
+  font-size: 2rem;
+  color: white;
+}
+
+.button:hover i {
+  color: #1a252f;
+}
+
+p {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+
+.button:hover p {
+  color: #1a252f;
+}
+
+#contact-section {
+  padding: 9.6rem;
+}
+
+#contact-section .star-place {
+  display: flex;
+  gap: 1rem;
+}
+
+#contact-section .black-star-line {
+  width: 11.2rem;
+  height: 0.4rem;
+  border-radius: 3rem;
+  background-color: black;
+}
+
+.form-place {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+  margin: 10rem 28rem;
+}
+
+label {
+  color: #6c757d;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+
+input,
+textarea {
+  max-width: 70rem;
+  margin-bottom: 10px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+button {
+  background-color: #6ad3bf;
+  max-width: 15rem;
+  max-height: 12rem;
+  width: 10rem;
+  height: 7rem;
+  padding: 10px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.9rem;
+  color: white;
+}
+
+#footer {
+  height: 30rem;
+  background-color: #2a3b4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 1.5rem; /* Увеличиваем размер текста для всех параграфов */
+}
+
+footer .head {
+  font-size: 2.6rem; /* Увеличиваем размер заголовков */
+  font-weight: bold; /* Сделаем текст жирным */
+  text-transform: uppercase;
+}
+
+footer .text {
+  font-size: 1.9rem; /* Увеличиваем размер обычного текста */
+  text-align: center;
+}
+
+.items {
+  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
+
+footer .icon {
+  padding: 1rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+footer a {
+  color: #1ab99a;
+  text-decoration: underline;
+}
+
+footer .icon:hover {
+  background-color: white;
+  color: #1a252f;
+}
+
+footer .icon i {
+  font-size: 1.5rem;
+}
+
+footer .icon:hover i {
+  color: #1a252f;
+}
+
+.rights {
+  background-color: #1a252f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  padding: 1rem;
+}
+
+.rights p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
