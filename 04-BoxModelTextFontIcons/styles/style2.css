@@ -5,13 +5,9 @@ p {
     line-height: 2;
 }
 
-.first-row, .second-row {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
 
 .green {
+    margin-left: 400px ;
     width: 300px;
     height: 200px;
     background-color: rgb(75, 177, 75);
@@ -20,6 +16,8 @@ p {
 }
 
 .orange {
+    margin-left: 750px;
+    margin-top: -230px;
     width: 300px;
     height: 200px;
     background-color: rgb(255, 165, 0);
@@ -28,6 +26,8 @@ p {
 }
 
 .light-blue {
+    margin-left: 400px;
+    margin-top: 30px;
     width: 300px;
     height: 200px;
     background-color: rgb(104, 230, 247);
@@ -36,6 +36,8 @@ p {
 }
 
 .dark-blue {
+    margin-left: 750px;
+    margin-top: -220px;
     width: 300px;
     height: 200px;
     background-color: rgb(88, 157, 190);

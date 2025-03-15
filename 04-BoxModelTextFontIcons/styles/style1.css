@@ -1,32 +1,54 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
 
 h1 {
-    font-size: 70px;
-    background-color: rgb(245, 159, 61);
-    padding: 70px;
-    text-align: center;
+  font-size: 70px;
+  background-color: rgb(245, 159, 61);
+  padding: 70px;
+  text-align: center;
 }
 
 .two-section {
-    background-color: rgb(253, 199, 72);
-    display: flex;
-    gap: 50px;
-    padding: 20px;
+  background-color: rgb(253, 199, 72);
+  padding: 10px;
 }
 
-.four-section {
-    display: flex;
+.first-sec {
+  margin-left: 90px;
+  width: 600px;
 }
 
-p {
-    padding: 10px;
-    margin: 30px 10px;
-    color: white;
-    background-color: rgb(91, 125, 225);
-    border: 4px solid black;
+.second-sec {
+  margin-left: 720px;
+  width: 600px;
+  margin-top: -50px;
+}
+
+.four-section p {
+  padding: 10px;
+  padding-bottom: 70px;
+  margin: 30px 10px;
+  color: white;
+  background-color: rgb(91, 125, 225);
+  border: 4px solid black;
+  width: 260px;
+  margin-left: 120px;
+}
+
+.four-section .second {
+  margin-top: -230px;
+  margin-left: 460px;
+}
+
+.four-section .third {
+  margin-top: -230px;
+  margin-left: 790px;
+}
+
+.four-section .fourth {
+  margin-top: -230px;
+  margin-left: 1100px;
 }

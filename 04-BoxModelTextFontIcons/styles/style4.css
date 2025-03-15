@@ -3,31 +3,36 @@
   src: url(../fonts/PinyonScript-Regular.ttf);
 }
 
-.first-row,
-.second-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  width: 600px;
-}
 
-h3 {
+h3.first-head {
+  margin-top: 100px;
+  margin-left: 500px;
   width: 100%;
   color: rgb(78, 78, 202);
 }
 
-p.font1 {
+p.first-prq {
+  margin-top: -80px;
+  margin-left: 780px;
   font-family: Arial, sans-serif;
   font-weight: 300;
   text-align: justify; /* qazetlerde oldugun kimi tam hisseni tutub teksti yayir polniy */
-  width: 500px;
+  width: 300px;
 }
 
-p.font2 {
-  font-family: font;
+p.second-prq {
+  margin-top: -100px;
+  margin-left: 780px;
+  font-family: "font";
   font-weight: 700;
   letter-spacing: 1px;
   text-align: justify; /* qazetlerde oldugun kimi tam hisseni tutub teksti yayir polniy */
-  width: 500px;
+  width: 300px;
+}
+
+h3.second-head {
+  margin-top: 150px;
+  margin-left: 500px;
+  width: 100%;
+  color: rgb(78, 78, 202);
 }
