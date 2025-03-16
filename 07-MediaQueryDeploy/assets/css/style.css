@@ -270,6 +270,16 @@ li:nth-child(1) a {
   .small-img .subtitle {
     font-size: 2rem;
   }
+
+  .nav-list {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    padding: 3rem;
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 756px) {
@@ -325,15 +335,6 @@ li:nth-child(1) a {
     font-size: 2rem;
   }
 
-  .nav-list {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-    padding: 3rem;
-    font-size: 2rem;
-  }
 }
 
 /* MEN */
