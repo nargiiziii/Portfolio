@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url(https://149842022.v2.pressablecdn.com/illdy/wp-content/themes/illdy/layout/images/front-page/front-page-header.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  position: sticky;
+}
+
+.hover-effect:hover {
+  color: yellow; 
+  cursor: pointer; 
+}
+
+.testimonials {
+  width: 100%;
+  background-color: #694b87;
+}
+
+.testimonials img {
+  border-radius: 50%;
+}
+
+.services {
+  margin-bottom: 60px;
+}
+
+.latest {
+  background-color: #222f36;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1100px) {
+  .services {
+    margin-bottom: 200px;
+  }
+}
