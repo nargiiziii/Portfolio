@@ -171,6 +171,9 @@ switch (season) {
     case 4:
         alert("Months: December, January, February")
     break;
+    default:
+        alert("Enter a valid season!!")
+    break;
 }
 
 
