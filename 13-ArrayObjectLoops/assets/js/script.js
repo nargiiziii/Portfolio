@@ -85,17 +85,39 @@ for (i = 0; i < arr.length; i++) {
 
 
 // -------4.Arraye daxil edilən 10 ədədin ededi ortasini tapan proqramın alqoritmi yazmaq.(While loop ile)-------
+// debugger
+/*
+let sum = 0;
+let count = 0;
+let arr = [1, 3, 4, 6, 7, 8, 9, 2, 11, 10];
 
-
-
+while (count < arr.length) {  
+    sum += arr[count];  
+    count++; 
+}
+// axirda sum'in qiymeti yuxardaki reqemlerin summasi olur ve biz summani massivin uzunluguna boluruk ve tapiriq ededi ortasini 
+let average = sum / arr.length;  
+console.log(average);  
+*/
 
 
 
 
 // -------5.Girilen ededin istenilen edede göre modunu(%) tapan algoritm yazmaq.-------
+// debugger
 
+/*
+let divisor = prompt("enter divisor")
+let dividend = prompt("enter dividend")
 
+let remainder = divisor;
 
+while (remainder >= dividend) {
+    remainder = remainder - dividend;
+}
+
+console.log(`${divisor}nin ${dividend}ye bolunmeden olan modu = ${remainder}`);
+*/
 
 
 
@@ -104,20 +126,103 @@ for (i = 0; i < arr.length; i++) {
 
 // 6.Verilmis array-de en boyuk ededin tapilmasi.
 
+/*
+let arr = [203, 19, 2, 13, 196, 86, 35, 77];
+
+max = arr[0]; //tutaq ki bu olsun max eded
+
+for (i = 0; i < arr.length; i++) {
+
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+
+}
+
+console.log(`en boyuk eded: ${max}`);
+*/
 
 
 // 7.Verilmiş array-in min elementi ilə max elementinin yerini dəyişən proqram tərtib edin
 
+/*
+let arr = [203, 19, 2, 13, 196, 86, 35, 77];
+
+max = arr[0]; //tutaq ki bu olsun max eded
+min = arr[0]; //tutaq ki bu olsun min eded
+
+for (i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+}
+
+for (i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+        min = arr[i];
+    }
+}
+
+let reverseVar;
+
+reverseVar = max;
+max = min;
+min = reverseVar;
+
+console.log(`en boyuk eded(balaca kecib yerine): ${max}`);
+
+console.log(`en balaca eded(boyuk kecib yerine): ${min}`);
+*/
 
 
 // 8.Verilmiş array-də min və max elementi nəzərə almadan yerdə qalan bütün elementlərin cəmini tapın.
+
+/*
+let arr = [203, 19, 2, 13, 196, 86, 35, 77];
+
+max = arr[0]; //tutaq ki bu olsun max eded
+min = arr[0]; //tutaq ki bu olsun min eded
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+    if (arr[i] < min) {
+        min = arr[i];
+    }
+}
+
+
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== min && arr[i] !== max) { // min ve max'i gormemek serti ile
+        sum += arr[i];
+    }
+}
+
+console.log(sum);
+*/
 
 
 
 // 9.Verilmiş array-e daxil olunan ədədin arreyde olub olmadığını təyin edən proqram tərtib edin.
 
+/*
+let arr = [203, 19, 2, 13, 196, 86, 35, 77]; 
 
+for (i = 0; i < arr.length; i++) {
+    let newNum = 3;
+
+    if(arr[i] = newNum){
+        console.log("massivin icinde olan reqemdir");
+    } else if (arr[i] != newNum) {
+        console.log("massivin icinde bele reqem yoxdur");
+    }
+}
+*/
 
 // 10.Verilmiş array-in elementlerinden neçəsinin bir rəqəmi, neçəsinin iki rəqəmi, ve necesinin uc reqemi oldugunu tapan algrithm yazmaq.
+
+let arr = [203, 19, 2, 13, 196, 86, 35, 77];
 
 
