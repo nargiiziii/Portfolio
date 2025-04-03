@@ -1,5 +1,6 @@
-
 // 1.Hər biri 2 parametr qəbul edib və riyazi əməlləri yerinə yetiren funksiya yazin.
+
+
 
 
 // function sum(num1, num2) {
@@ -28,47 +29,32 @@
 
 
 
+
+
+
 // 2.Verilen parametrlerde tek ve cutlerin tapilmasi.(Rest operatoru istifade etmek)(14, 20, 35, 40, 57, 60, 100)
 
-// tek- нечетные    3 % 2 = 1
-// cut- четные      4 % 2 = 0
 
 
+// let func = (...numbers) => {
+//     //debugger
+//     let i = 0;
 
+//     while (i < numbers.length) {
+//         let num = numbers[i];   //bir bir her reqemi goturub tek ya cut oldugunu yoxlayacaq
 
-let func = (...numbers) => {
-    debugger
-    let i = 0;
-    
-    while (i < numbers.length) {
-        let num = numbers[i];   //bir bir her reqemi goturub tek ya cut oldugunu yoxlayacaq
-        
-        if (num % 2 === 1) {
-            console.log(`tek: ${num}`);
-        } else if (num % 2 === 0) {
-            console.log(`cut: ${num}`);
-        }
+//         if (num % 2 === 1) {
+//             console.log(`tek: ${num}`);
+//         } else if (num % 2 === 0) {
+//             console.log(`cut: ${num}`);
+//         }
 
-        i++
-    }
-}
-
-func(14, 20, 35, 40, 57, 60, 100);
-
-// let arr = [14, 20, 35, 40, 57, 60, 100];
-
-// for (let i = 0; i < arr.length; i++) {
-//     num = arr[i];
-//     if (num % 2 == 1) {
-//        let tekNum = num;
-//        console.log(tekNum);
-//     } 
-    
-//     else if (num % 2 == 0) {
-//         let cutNum = num;
-//         console.log(`cutler: ${cutNum}`);
+//         i++   // bir sonraki reqeme kecmek ucun bunu yazdiq (yazmasam sonsuz loop olur)
 //     }
 // }
+
+// func(14, 20, 35, 40, 57, 60, 100);
+
 
 
 
@@ -79,7 +65,108 @@ func(14, 20, 35, 40, 57, 60, 100);
 
 
 // 3.Verilmis arreyde elementlerin həm 4-ə, həm də 5-ə bölününen elementlerin cemini tapin.[14, 20, 35, 40, 57, 60, 100]
+
+
+
+
+// let numbers = [14, 20, 35, 40, 57, 60, 100];
+
+// function sum(arr) {
+//     let summa = 0;   //yeni variable yaratdim ki icinde cemini yigim
+
+//     for (i = 0; i < arr.length; i++) {
+//         let num = arr[i];
+
+//         if ( num % 5 === 0 && num % 4 === 0) {
+//             summa += num;
+//         }
+//     }
+//     return(summa)
+
+// }
+
+// console.log(sum(numbers));  //burda functionu cagiranda "arr" yerine "numbers" yazdim ki yuxardaki "numbers =[..]" massivimi gotursun ve "arr"a asign elesin
+
+
+
+
+
+
+
+
+
+
+
 // 4.Daxil edilmiş cümlədə daxil edilmis simvoldan nece eded olduğunu tapan Proqramın alqoritmini yazin.
-// 5.Daxil edilen ededin Aboundant ve ya Deficient oldugunu yoxlayan algorithm.(Abundant ədəd öz müsbət bolenlerinin(ozunden basqa) cəmi özündən böyük olan müsbət tam ədədlərə deyilir. Eks halda Deficient eded olur. 12-Aboundant, 13- Deficient)
+
+
+
+
+// function symbolCount(symbol, text) {
+//     // debugger
+// let count = 0;   //tesevvur edek ki bu text'i oxumadan qabaq olan simvol sayidi
+
+//     for( i = 0; i < text.length; i++){
+//         if ( text[i] === symbol) {
+//             count++   //her "a" simvolunu gordukde bu if blokuna girecek ve bu setrde count'u 1 defe coxaldacaq
+//         }
+//     }
+//      return count;
+// }
+    
+//     let text = "Ramazan";
+//     let symbol = "a";
+
+// symbolQuantity = symbolCount(symbol, text);
+// console.log(`we have ${symbolQuantity} symbols ${symbol} in the text ${text}`);
+
+
+
+
+
+
+
+
+// 5.Daxil edilen ededin Aboundant ve ya Deficient oldugunu yoxlayan algorithm.
+// (Abundant ədəd öz müsbət bolenlerinin(ozunden basqa) cəmi özündən böyük olan müsbət tam ədədlərə deyilir. 
+// Eks halda Deficient eded olur. 12-Aboundant, 13- Deficient)
+
+
+
+
+
+// function checkNum (num) {
+//     // debugger
+//     divisorsSum = 0;     //birinci bolenlerinin cemini 0 olaraq teyin edirem
+//     for (i = 0; i <= num/2; i++) {     // 0dan ededin yarisina kimi olacaq dovr 
+//         if (num % i === 0) {    //burda konkret hansi reqemler num'a bolunur ise onlari gorub bu if blokuna girecek ve siraynan bolunenlerin cemini yigacaq
+//             divisorsSum = divisorsSum + i;  
+//         } 
+//     }
+
+//     if (divisorsSum > num) {
+//         console.log(`${num} is an aboundant nummber`);
+//     } else if (divisorsSum < num) {
+//         console.log(`${num} is a deficient number`);
+//     }
+// }
+
+// checkNum(12)
+
+
+
+
+
 // 6.Array-in bütün elementlərini kvadrata yüksəldib yeni array qaytaran funksiya yazın.
-// 7.İçərisində name və age key-ləri olan obyektlərdən təşkil olunmuş bir array var. Ən az yaşı olan ilə ən çox yaşı olan elementin yaşlarını və onların fərqini array şəklində qaytaran funksiya yazın. Məsələn - [13,67,54]
+
+
+
+
+
+
+
+// 7.İçərisində name və age key-ləri olan obyektlərdən təşkil olunmuş bir array var. 
+// Ən az yaşı olan ilə ən çox yaşı olan elementin yaşlarını və onların fərqini array şəklində qaytaran funksiya yazın. Məsələn - [13,67,54]
+
+
+
