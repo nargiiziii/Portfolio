@@ -32,6 +32,7 @@
 
 
 
+
 // 2.Verilen parametrlerde tek ve cutlerin tapilmasi.(Rest operatoru istifade etmek)(14, 20, 35, 40, 57, 60, 100)
 
 
@@ -64,6 +65,7 @@
 
 
 
+
 // 3.Verilmis arreyde elementlerin həm 4-ə, həm də 5-ə bölününen elementlerin cemini tapin.[14, 20, 35, 40, 57, 60, 100]
 
 
@@ -78,7 +80,7 @@
 //         let num = arr[i];
 
 //         if ( num % 5 === 0 && num % 4 === 0) {
-//             summa += num;
+//             summa += num;  //massivin icinde olan her 4e ve 5e bolunen reqemler bu if blokuna girecek ve summanin icinde cemi yigilacaq
 //         }
 //     }
 //     return(summa)
@@ -86,6 +88,7 @@
 // }
 
 // console.log(sum(numbers));  //burda functionu cagiranda "arr" yerine "numbers" yazdim ki yuxardaki "numbers =[..]" massivimi gotursun ve "arr"a asign elesin
+
 
 
 
@@ -108,7 +111,7 @@
 
 //     for( i = 0; i < text.length; i++){
 //         if ( text[i] === symbol) {
-//             count++   //her "a" simvolunu gordukde bu if blokuna girecek ve bu setrde count'u 1 defe coxaldacaq
+//             count++   //her "a" simvolunu gordukde bu if blokuna girecek ve bu setrde count'u 1 defe coxaldacaq ve yene yuxari cixacaq (i text'in uzunlugunnan qisa oldugu muddetde)
 //         }
 //     }
 //      return count;
@@ -119,6 +122,10 @@
 
 // symbolQuantity = symbolCount(symbol, text);
 // console.log(`we have ${symbolQuantity} symbols ${symbol} in the text ${text}`);
+
+
+
+
 
 
 
@@ -157,7 +164,38 @@
 
 
 
+
+
+
+
+
+
 // 6.Array-in bütün elementlərini kvadrata yüksəldib yeni array qaytaran funksiya yazın.
+
+
+
+// arr = [2, 3, 4, 5]
+
+// function degree() {
+//     // debugger
+//     let newArr = [];  //yeni bos massiv yaratdim 
+//     let newNum = 0;   //yeni elementler 0dan baslayacaq
+
+//     for (i = 0; i < arr.length; i++) {
+//         let num = arr[i]**2;  
+        
+//         newArr[newNum] = num;  //yeni massivin icine yeni kvadrata yukselmis element asign eliyirem
+//         newNum++;   //her defe bu line'dan sonra gedecek yuxari ve sonraki kohne massivin elementini yukseldecek kvadrata 
+//     }
+//     return newArr;
+// }
+
+// let newArray = degree();
+// console.log(newArray);
+
+
+
+
 
 
 
@@ -167,6 +205,40 @@
 
 // 7.İçərisində name və age key-ləri olan obyektlərdən təşkil olunmuş bir array var. 
 // Ən az yaşı olan ilə ən çox yaşı olan elementin yaşlarını və onların fərqini array şəklində qaytaran funksiya yazın. Məsələn - [13,67,54]
+
+
+
+
+// let arr = [
+//     { name: "Nargiz", age: 20 },
+//     { name: "Mehemmed", age: 18 },
+//     { name: "Ibrahim", age: 9 },
+//     { name: "Nazli", age: 14 }
+// ];
+
+// let maxAge = arr[0].age;   //tutaq ki max age budu
+// let minAge = arr[0].age;   //tutaq ki min age budu
+
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i].age > maxAge) {
+//         maxAge = arr[i].age;    //burada max age tapiram //20
+//     }
+//     if (arr[i].age < minAge) {
+//         minAge = arr[i].age;    //burada min age tapiram //9
+//     }
+// }
+
+
+// let difference = (max, min) => max - min;   //high order function istifade etdim
+
+// let usersAge = (max, min, func) => {
+//     return [max, min, func(max, min)];
+// };
+
+// console.log(usersAge(maxAge, minAge, difference)); 
+
+
 
 
 
