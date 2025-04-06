@@ -351,7 +351,13 @@
 
 // Ən boyuk elementini tapmaq:
 
-// let numbers = [3, 7, 12, 23, 34, 45, 56, 67, 89, 98];
+
+// let numbers = [];
+// for (let i = 0; i < 10; i++) {
+//     numbers.push(Math.floor(Math.random() * 100)); //random metodu 0 ve 1 arasi eded yaradir deye onu 100e vurdum ve floor metodu ile ortaladim
+// }
+// console.log("random reqemler:", numbers);
+
 // let biggestNum = Math.max.apply(null, numbers); //massivdeki butun elementleri Math.max metoduna gondermek ucun apply metodunu isletdim. amma birinci null yazdim cunki Math.max o parametra baxmayacaq,istifade etmeyecek
 // let smallestNum = Math.min.apply(null, numbers); 
 
@@ -367,7 +373,14 @@
 
 // Toplamını tap (bütün ədədləri cəmlə).
 
-// let numbers = [3, 7, 12, 23, 34, 45, 56, 67, 89, 98];
+
+// let numbers = [];
+
+// for (let i = 0; i < 10; i++) {
+//     numbers.push(Math.floor(Math.random() * 100)); 
+// }
+// console.log("random reqemler:", numbers);
+
 // let sum = numbers.reduce((acc, num) => {
 //     return acc + num;
 // }, 0)
@@ -383,7 +396,13 @@
 // Orta qiymətini tap.
 
 
-// let numbers = [3, 7, 12, 23, 34, 45, 56, 67, 89, 98];
+// let numbers = [];
+
+// for (let i = 0; i < 10; i++) {
+//     numbers.push(Math.floor(Math.random() * 100)); 
+// }
+// console.log("random reqemler:", numbers);
+
 // let sum = numbers.reduce((acc, num) => {
 //     return acc + num;
 // }, 0)
@@ -400,7 +419,12 @@
 // Hər elementin kvadratını tap və yeni array yarat.
 
 
-// let numbers = [3, 7, 12, 23, 34, 45, 56, 67, 89, 98];
+// let numbers = [];
+
+// for (let i = 0; i < 10; i++) {
+//     numbers.push(Math.floor(Math.random() * 100)); 
+// }
+// console.log("random reqemler:", numbers);
 
 // let squares = numbers.reduce((acc, num) => {
 //     acc.push(Math.pow(num, 2)); //push ile acc massivine elave edirem, pow ile ise reqemlerin kvadratini tapiram
