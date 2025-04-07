@@ -44,6 +44,7 @@
 //   }
 // };
 
+
 // const {name, department, contact} = employee;
 // console.log(`name: "${name}", department: "${department}", email: "${contact.email}"`);
 
