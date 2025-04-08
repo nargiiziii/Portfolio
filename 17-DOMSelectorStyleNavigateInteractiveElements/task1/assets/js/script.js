@@ -70,7 +70,7 @@
 // let card = document.querySelector(".card");
 
 // let img = card.querySelector("img");
-// img.src = "https://avatars.mds.yandex.net/i?id=68495fdccbf5a3b5fb8bcce557ab0a351eb91ad2-5713119-images-thumbs&n=13";
+// img.src = "https://avatars.mds.yandex.net/get-marketpic/8615618/picbed33b02f3a2e01d8d3467ddf8ab1821/orig";
 // console.log(img);
 
 
@@ -79,14 +79,14 @@
 // let cardContent = card.querySelector(".cardContent"); //card ile elementleri goturmeye davam ede bilerdim, amma daha deqiq olsun deye cardContente girdim, onun icinnen cixardim title,text,price
 
 // let title = cardContent.querySelector(".cardTitle");
-// title.textContent = "house";
+// title.textContent = "Iphone 12";
 // console.log(title);
 
 // let text = cardContent.querySelector(".cardText");
-// text.textContent = "very big and comfortable house, buy it!";
+// text.textContent = "256GB, faceId, etc";
 // console.log(text);
 
 // let price = cardContent.querySelector(".cardPrice");
-// price.textContent = "100.000$";
+// price.textContent = "2.000$";
 // console.log(price);
 
