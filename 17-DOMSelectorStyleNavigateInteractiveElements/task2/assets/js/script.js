@@ -6,35 +6,29 @@ card.style.width = "20rem";
 card.style.background = "rgba(173, 216, 230, 0.3)";
 card.style.padding = "1rem";  
 card.style.borderRadius = "10px";
-console.log(card);
-
 
 
 let image = document.createElement("img");
 image.classList.add("card-img");
 image.setAttribute("src", "https://avatars.mds.yandex.net/i?id=68495fdccbf5a3b5fb8bcce557ab0a351eb91ad2-5713119-images-thumbs&n=13");
 image.style.width = "20rem";
-console.log(image);
 
 
 let title = document.createElement("h3");
 title.textContent = "DETACHED HOUSE - 5Y OLD";
 title.style.color = "gray";
-console.log(title);
 
 let price = document.createElement("p");
 price.setAttribute("class", "card-price");
 price.textContent = "$750.00";
 price.style.fontSize = "3rem";
 price.style.margin = "0";
-console.log(price);
 
 let subtitle = document.createElement("h4");
 subtitle.textContent = "742 Evergreen Terrace";
 subtitle.style.color = "gray";
 subtitle.style.fontSize = "1.3rem";
 subtitle.style.margin = "6px 0";
-console.log(subtitle);
 
 
 let productInfo = {
