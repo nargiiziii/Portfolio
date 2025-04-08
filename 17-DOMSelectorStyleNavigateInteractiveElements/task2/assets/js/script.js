@@ -43,6 +43,8 @@ let productInfo = {
     subtitle: subtitle,
 }
 
+
+
 let heartIcon = document.createElement("i");
 heartIcon.setAttribute("class", "fa-regular fa-heart fa-xl");
 heartIcon.style.position = "absolute";
