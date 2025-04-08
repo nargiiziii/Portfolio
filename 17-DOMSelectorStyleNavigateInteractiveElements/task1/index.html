@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./assets/js/script.js"></script>
+</head>
+<style>
+    .card {  margin: 50px;
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.heart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: silver;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: burlywood;
+}
+.cardPrice {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(95, 94, 91);
+}
+.shopBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: skyblue;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: bold;
+}
+</style>
+
+<body>
+
+    <div class="card">
+        <div class="image">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <img src="https://i.pinimg.com/736x/39/ff/a9/39ffa95f3d97152cffdfcff89a355c5d.jpg" />
+        </div>
+        <div class="cardContent">
+          <h2 class="cardTitle">Card Title</h2>
+          <p class="cardText">Lorem, ipsum dolor.</p>
+          <span class="cardPrice">150Azn</span>
+          <button class="shopBtn">Buy Now</button>
+        </div>
+      </div>
+
+
+</body>
+</html>
