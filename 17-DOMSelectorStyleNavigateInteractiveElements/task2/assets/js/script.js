@@ -113,7 +113,7 @@ realtor.classList.add("realtor-area");
 realtor.style.display = "block";
 
 let realtorHead = document.createElement("p");
-realtorHead.classList.add("realtor-head"); //silersen
+realtorHead.classList.add("realtor-head"); 
 realtorHead.textContent = "REALTER";
 realtorHead.style.fontSize = "1rem";
 realtorHead.style.color = "gray";
