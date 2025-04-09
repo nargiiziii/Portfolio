@@ -13,8 +13,15 @@ function forToDo (e) {
     if (input.value == "") {
         alert("please enter task!");
         return;
-    }
+    } 
 
+    let existingTasks = document.querySelectorAll(".task");
+    for (let i = 0; i < existingTasks.length; i++) {
+    if (existingTasks[i].textContent === input.value) {
+        alert("hey, this task already exists.");
+        return;
+    }
+}
 
 
 let li = document.createElement("li");

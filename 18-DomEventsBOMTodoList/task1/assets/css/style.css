@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator {
+    height: 200px;
+    width: 1000px;
+    background-color: plum;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+}
+
+.input-area {
+    display: flex;
+    gap: 20px;
+}
+.input-area input {
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+/* inputun saygaca oxsar yerini legv etmek ucun yazdim */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.result {
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.operations button{
+    margin: 0 5px;
+    width: 100px;
+    padding: 8px 10px;
+    border: 1px solid violet;
+    border-radius: 10px;
+    cursor: pointer;
+}

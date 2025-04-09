@@ -7,7 +7,7 @@
 .to-do-list-area {
     margin: 18px auto;
     padding: 10px;
-    height: 500px;
+    height: 100%;
     width: 400px;
     background-color: rgb(252, 197, 235);
     border-radius: 10px;
