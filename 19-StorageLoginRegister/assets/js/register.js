@@ -129,13 +129,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!uniqueUser) {
             let newUser = {
-                name: name.value,
-                username: usernameValue,
-                email: emailValue, 
-                password: passwordValue,
-                isLogined: false,
-                id,
+              name: name.value,
+              username: usernameValue,
+              email: emailValue,
+              password: passwordValue,
+              isLogined: false,
+              failedAttempts: 0, //password ucun attemptlerin sayi(cox olsa bloklanacaq)
+              isLocked: false,  //bloklanmis olub olmamasini burda saxlayacam
+              id,
             };
+          
 
             users.push(newUser);
             localStorage.setItem("users", JSON.stringify(users));
