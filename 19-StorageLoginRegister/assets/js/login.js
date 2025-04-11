@@ -9,33 +9,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function login(e) {
     e.preventDefault();
-    // debugger
-    console.log(users);
 
-    if (!users) {
-      toast("user is not found");
-    }
-
-    let isLoginedUser = users.find(
-      (user) =>
-        user.username == username.value && user.password == password.value
-    );
-
-    if (isLoginedUser) {
-        isLoginedUser.isLogined = true;
-        localStorage.setItem("users", JSON.stringify(users));
-        toast("user login succesfully!");
-        
-        setTimeout(() => {
-            window.location.href = "index.html"
-        }, 4000);
-
-    } else {
-        toast("username or password incorrect!");
-        return
+    let usernameValue = username.value.trim();
+    let passwordValue = password.value.trim();
+    
+    let isEmail = usernameValue.includes("@");
+    //emaildirse yoxlanis edirem:
+    if (isEmail) {
+        if (usernameValue.indexOf("@") < 1 || usernameValue.indexOf(".") < usernameValue.indexOf("@") + 1) {
+            toast("please enter correct email address!!");
+            return;
+        } else {
+            console.log("email is correct");
+        }
+    } else {  //email deyilse demeli username'di ve onun ucun yoxlanis edirem:
+        if (usernameValue.length === 0) {  
+            toast("please enter your username");
+            return;
+        }
+        console.log("username is correct");
     }
     
+    if (passwordValue.length < 8) {
+        toast("password must have at least 8 symbols");
+        return;
+    }
+
+    
+
+
+    // debugger      
+
+  let user = users.find((user) => user.username === usernameValue);
+ //passwordu 4 defeden cox sehv yazsa userin blok olmasi ucun:
+  if (user) {
+    if (user.isLocked) {
+      toast("too many attempts!!you are blocked for 15 minutes!!");
+      return;
+    }
+
+    if (user.password === passwordValue) {
+      user.isLogined = true;
+      user.failedAttempts = 0;
+      user.isLocked = false;
+      localStorage.setItem("users", JSON.stringify(users));
+      toast("user login successfully!");
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 4000);
+    } else {
+
+      user.failedAttempts = (user.failedAttempts || 0) + 1;
+
+      if (user.failedAttempts >= 4) {
+        user.isLocked = true;
+        localStorage.setItem("users", JSON.stringify(users));
+
+        toast("too many attempts!!you are blocked for 15 minutes!!");
+
+        // 15 deyqeden sonra cixariram blokdan
+        setTimeout(() => {
+          let updatedUsers = JSON.parse(localStorage.getItem("users")) || [];
+          let updatedUser = updatedUsers.find(
+            (user) => user.username === usernameValue
+          );
+          if (updatedUser) {
+            updatedUser.isLocked = false;
+            updatedUser.failedAttempts = 0;
+            localStorage.setItem("users", JSON.stringify(updatedUsers));
+          }
+        }, 15 * 60 * 1000); //15 deyqe
+      } else {
+        let remainingAttmp = 4 - user.failedAttempts;
+        toast(`incorrect password. after ${remainingAttmp} attempts you will be blocked!!`);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+    }
+  } else {
+    toast("username not found!");
   }
+}
 });
 
 let toast = (text) => {
