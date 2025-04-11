@@ -1,57 +1,40 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    let form = document.querySelector("form");
+    let users = JSON.parse(localStorage.getItem("users"));
 
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let loginedUser = users.find((user) => user.isLogined == true);
 
-    let name = document.querySelector("#name");
-    let username = document.querySelector("#username");
-    let email = document.querySelector("#email");
-    let password = document.querySelector("#password");
-    let confirmpassword = document.querySelector("#confirmpassword")
+    let login = document.querySelector(".login");
+    
+    let register = document.querySelector(".register");
+    
+    let logout = document.querySelector(".logout");
 
 
-    form.addEventListener("submit", register);
 
-    function register(e) {
-        e.preventDefault();
-
-        let uniqueUser = users.some(
-            (user) => user.username == username.value || user.email == email.value
-        );
-
-        if(!uniqueUser) {
-            let newUser = {
-                name: name.value,
-                username: username.value,
-                email: email.value, 
-                password: password.value,
-                confirmpassword: confirmpassword.value,
-            };
-
-            users.push(newUser);
-            localStorage.setItem("users", JSON.stringify(users));
-            toast("Register successfuly!!");
-            setTimeout(() => {
-                window.location.href = "login.html"
-            }, 4000);
-        } else {
-            toast("User already exist!")
-        }
-
+    
+    if(loginedUser) {
+        login.classList.add("d-none");
+        register.classList.add("d-none");
+        logout.classList.remove("d-none");
+    } else {
+        login.classList.remove("d-none");
+        register.classList.remove("d-none");
+        logout.classList.add("d-none")
     }
 
-    let toast= (text) => {
-        Toastify({
-            text: `${text}`,
-            duration: 3000,
-            position: "right", 
-            stopOnFocus: true, 
-            style: {
-              background: "linear-gradient(to right,rgb(23, 63, 204),rgb(87, 116, 222))",
-            },
-            onClick: function(){} 
-          }).showToast();
+    let logoutUser = () => {
+        loginedUser.isLogined = false;
+        localStorage.setItem("users", JSON.stringify(users));
+        logout.classList.add("d-none");
+        login.classList.remove("d-none");
+        register.classList.remove("d-none");
     }
 
-})
+    logout.addEventListener("click", logoutUser);
+
+});
+
+
