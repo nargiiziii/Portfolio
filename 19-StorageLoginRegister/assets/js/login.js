@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     } else {  //email deyilse demeli username'di ve onun ucun yoxlanis edirem:
         if (usernameValue.length === 0) {  
-            toast("please enter your username");
+            toast("please enter your full username");
             return;
         }
         console.log("username is correct");
