@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let haveUppercase = value !== value.toLowerCase();
         let haveLowercase = value !== value.toUpperCase();
-        let haveDigit = value.split("").some(char => "0123456789".includes(char));  // Используем split
-        let haveSpecial = value.split("").some(char => "@#$%&".includes(char));     // Используем split
+        let haveDigit = value.split("").some(char => "0123456789".includes(char));  
+        let haveSpecial = value.split("").some(char => "@#$%&".includes(char));    
         let isLong = value.length >= 8;
+
 
         if (
             haveUppercase &&
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             toast("Username must have less than 20 characters");
             return;  
         }
-
+        //ozum herf ve simvollari verirem ki icinnen yoxlanis elesin her simvolu
         let permittedSymb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"; 
         
         if (usernameValue.split("").every(char => permittedSymb.includes(char))) {
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             emailValue.includes(".") &&         
             emailValue.endsWith(".com") &&     
             emailValue.indexOf("@") > 0 &&      
-            emailValue.indexOf(".") > emailValue.indexOf("@") + 1 //noqteden sonra @ olmalidi
+            emailValue.indexOf(".") > emailValue.indexOf("@") + 1 //noqteden sonra @ olmalidi deye
         ) {
             console.log("email is correct");
         } else {
