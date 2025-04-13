@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let loginedUser = users.find((user) => user.isLogined == true);
 
+    
+    let userBtn = document.querySelector(".username");
+    userBtn.textContent = loginedUser?.username;
+
     let login = document.querySelector(".login");
     
     let register = document.querySelector(".register");
@@ -36,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         settings.classList.add("d-none");
         login.classList.remove("d-none");
         register.classList.remove("d-none");
+
+        userBtn.textContent = "";
     }
 
     logout.addEventListener("click", logoutUser);

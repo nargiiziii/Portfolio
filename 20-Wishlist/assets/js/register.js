@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
             haveSpecial &&
             isLong
         ) {
-            checkPass.textContent = "✔";
+            checkPass.textContent = "perfect";
             checkPass.style.color = "green";
         } else {
-            checkPass.textContent = "✖";
+            checkPass.textContent = "too weak";
             checkPass.style.color = "red";
         }
     });
@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
               failedAttempts: 0, //password ucun attemptlerin sayi(cox olsa bloklanacaq)
               isLocked: false,  //bloklanmis olub olmamasini burda saxlayacam
               id,
+              wishlist: [],
             };
           
 
@@ -157,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Toastify({
             text: `${text}`,
             duration: 3000,
-            position: "right", 
+            position: "left", 
             stopOnFocus: true, 
             style: {
                 background: "linear-gradient(to right, rgb(5, 125, 162),rgb(110, 185, 208))",
