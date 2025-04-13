@@ -249,6 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
     let loginedUser = users.find((user) => user.isLogined == true);
+
     let userBtn = document.querySelector(".username");
     userBtn.textContent = loginedUser?.username;
 
@@ -260,40 +261,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let settings = document.querySelector(".settings");
 
+    let wishlistLink = document.querySelector(".wishlist-link");
 
-function updateUserStatus(){
-    if(loginedUser) {
-        login.classList.add("d-none");
-        register.classList.add("d-none");
-        logout.classList.remove("d-none");
-        settings.classList.remove("d-none");
-    } else {
-        login.classList.remove("d-none");
-        register.classList.remove("d-none");
-        logout.classList.add("d-none")
-        settings.classList.add("d-none")
-    }
-}
+
+    function updateUserStatus(){
+      if(loginedUser) {
+          login.classList.add("d-none");
+          register.classList.add("d-none");
+          logout.classList.remove("d-none");
+          settings.classList.remove("d-none");
+      } else {
+          login.classList.remove("d-none");
+          register.classList.remove("d-none");
+          logout.classList.add("d-none")
+          settings.classList.add("d-none")
+      }
+  }
     
-
-
     let logoutUserFunc = () => {
         loginedUser.isLogined = false;
+        // logout etdikden sonra localstorageden wishlisti sifirlayiram
+        loginedUser.wishlist = [];
+
         localStorage.setItem("users", JSON.stringify(users));
+
+        loginedUser = null; //bunu null eledim ki wishliste kecid ede bilmesin, user cixis etdikden sonra login melumati sifirlansin 
+
         logout.classList.add("d-none");
         settings.classList.add("d-none");
         login.classList.remove("d-none");
         register.classList.remove("d-none");
 
-        toast("user logged out!!")
+        userBtn.textContent = "";
+
+        toast("user logged out!!");
+
+       let cards = document.querySelector(".cards")
+
+      //logout etdikden sonra UI'dan heart'lari silmek ucun bele if bloku yazdim:
+        if (cards) {
+          cards.innerHTML = "";   
+          createUserCard();                 
+      }
+
     }
 
     logout.addEventListener("click", logoutUserFunc);
 
+    // login olmayanda wishlist seyfesine kecmek olmasin deye:
+    if(wishlistLink){
+      wishlistLink.addEventListener("click", (e) => {
+        if(!loginedUser){ 
+          e.preventDefault();
+          toast("before entering the wishlist,you should log in!!");
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 2000);
+        }
+      });
+    }
+    
 
 
-
-function createUserCard(){
+  function createUserCard(){
 
     products.forEach((product) => {
 
@@ -303,6 +333,19 @@ function createUserCard(){
             let heartIcon = document.createElement("i");
             heartIcon.classList.add("fa-regular", "fa-heart", "card-heart");
             card.appendChild(heartIcon);
+
+
+            //refresh etdikden sonra secilmis produktlar seyfede qalsin deye:
+            if(loginedUser && loginedUser.wishlist.some(item => item.id === product.id)){
+              heartIcon.classList.add("fa-solid");
+            }else {
+              heartIcon.classList.add("fa-regular");
+            }
+            
+
+            heartIcon.addEventListener("click", () => {
+              toggleUserWishlist(product.id, heartIcon)
+            });
 
             let cardImage = document.createElement("div");
             cardImage.classList.add("card-image");
@@ -315,7 +358,7 @@ function createUserCard(){
 
             let cardTittle = document.createElement("h2");
             cardTittle.classList.add("card-title");
-            cardTittle.textContent= `${product.title.slice(0, 20)}. . .`;
+            cardTittle.textContent= `${product.title.slice(0, 18)}. . .`;
 
             let cardCategory = document.createElement("p");
             cardCategory.classList.add("card-category");
@@ -349,6 +392,53 @@ function createUserCard(){
         });
     }
 
+
+    function toggleUserWishlist(productId, heartIcon){
+
+      if(!loginedUser){
+        toast("you should login first!!");
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 3000);
+
+      }
+
+      let userIndex = users.findIndex((user) => user.id == loginedUser?.id);
+
+      let currentProduct = loginedUser.wishlist.some((item) => item.id === productId);
+
+      if(currentProduct) {
+        let currentProductIndex = loginedUser.wishlist.findIndex(
+          (product) => product.id == productId
+        );
+
+        loginedUser.wishlist.splice(currentProductIndex, 1); //wishlistde bu product olarsa onu silirem
+
+        users[userIndex] = loginedUser;
+        localStorage.setItem("users", JSON.stringify(users));
+
+        heartIcon.classList.remove("fa-solid");
+        heartIcon.classList.add("fa-regular");
+        
+        toast("product removed from wishlist");
+
+      } else {
+        let addProduct = products.find((product)=> product.id == productId);
+
+        loginedUser.wishlist.push(addProduct); //wishlistde product yoxdusa onu elave edirem wishlist arrayin icine
+
+        users[userIndex] = loginedUser;
+        localStorage.setItem("users", JSON.stringify(users));
+
+        heartIcon.classList.add("fa-solid");
+        heartIcon.classList.remove("fa-regular");
+
+        toast("product added to wishlist")
+
+      }
+
+    }
+
     updateUserStatus();
     createUserCard();
 
@@ -356,16 +446,15 @@ function createUserCard(){
 });
 
 let toast = (text) => {
-    Toastify({
-        text: `${text}`,
-        duration: 3000,
-        position: "right", 
-        stopOnFocus: true, 
-        style: {
-            background: "linear-gradient(to right, rgb(5, 125, 162),rgb(110, 185, 208))",
-        },
-        onClick: function() {} 
-    }).showToast();
+  Toastify({
+      text: `${text}`,
+      duration: 3000,
+      position: "left", 
+      stopOnFocus: true, 
+      style: {
+          background: "linear-gradient(to right, rgb(5, 125, 162),rgb(110, 185, 208))",
+      },
+      onClick: function() {} 
+  }).showToast();
 }
-
 

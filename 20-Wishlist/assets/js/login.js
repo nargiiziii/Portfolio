@@ -96,7 +96,7 @@ let toast = (text) => {
   Toastify({
     text: `${text}`,
     duration: 3000,
-    position: "right",
+    position: "left",
     stopOnFocus: true,
     style: {
       background:

@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
 let toast = (text) => {
     Toastify({
       text: `${text}`,
-      duration: 3000,
-      position: "right",
+      duration: 2000,
+      position: "left",
       stopOnFocus: true,
       style: {
         background:

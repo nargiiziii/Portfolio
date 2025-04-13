@@ -1,4 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", () => {
+  
   let users = JSON.parse(localStorage.getItem("users"));
   let form = document.querySelector("form");
 
@@ -36,9 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     
-
-
-    // debugger      
+  // debugger      
 
   let user = users.find((user) => user.username === usernameValue);
  //passwordu 4 defeden cox sehv yazsa userin blok olmasi ucun:
@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
 let toast = (text) => {
   Toastify({
     text: `${text}`,
-    duration: 3000,
-    position: "right",
+    duration: 2000,
+    position: "left",
     stopOnFocus: true,
     style: {
       background:

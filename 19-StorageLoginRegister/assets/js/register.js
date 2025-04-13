@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
             haveSpecial &&
             isLong
         ) {
-            checkPass.textContent = "✔";
+            checkPass.textContent = "perfect"; 
             checkPass.style.color = "green";
         } else {
-            checkPass.textContent = "✖";
+            checkPass.textContent = "too weak";
             checkPass.style.color = "red";
         }
     });
@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         
-
 
         // password yoxlanisi
 
@@ -156,8 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let toast = (text) => {
         Toastify({
             text: `${text}`,
-            duration: 3000,
-            position: "right", 
+            duration: 2000,
+            position: "left", 
             stopOnFocus: true, 
             style: {
                 background: "linear-gradient(to right, rgb(5, 125, 162),rgb(110, 185, 208))",
