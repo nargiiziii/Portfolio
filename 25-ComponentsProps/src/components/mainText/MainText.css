@@ -1,0 +1,30 @@
+.center-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: white;
+    padding: 230px 0;
+}
+
+.center-text em{
+    font-size: 36px;
+}
+
+.center-text h2{
+    font-size: 72px;
+}
+
+.center-text button{
+    font-size: 18px;
+    padding: 20px 40px;
+    background-color: #ffc800;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center-text button:hover{
+    background-color: #e0b004;
+}
+
+

@@ -1,0 +1,57 @@
+.porfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 410px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.porfolio-item img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.porfolio-item .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc80087;
+    opacity: 0;
+/* plus ucun */
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.porfolio-item:hover .img-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.porfolio-item .name {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.porfolio-item .desc {
+    color: gray;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.porfolio-item img {
+    width: 410px;
+    height: 310px;
+}

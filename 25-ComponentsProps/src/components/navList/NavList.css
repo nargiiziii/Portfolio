@@ -1,0 +1,13 @@
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+li:nth-child(1) {
+    color: yellow;
+}
+
+li {
+    list-style: none;
+    color: white;
+}
