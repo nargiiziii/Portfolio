@@ -1,0 +1,18 @@
+
+.inputs_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.inputs_area input{
+   border: 1px solid gray;
+   outline: none;
+   padding: 20px;
+   width: 500px;
+   font-size: 16px;
+   border-radius: 10px;
+}

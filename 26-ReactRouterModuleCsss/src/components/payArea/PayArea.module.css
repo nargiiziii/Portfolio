@@ -1,0 +1,55 @@
+.pay_area {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.cards_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 50px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 350px;
+  background-color: white;
+}
+
+.card p {
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.card .info {
+  font-size: 16px;
+  color: gray;
+  line-height: 2;
+  width: 160px;
+}
+
+.head_text {
+  text-align: center;
+}
+
+.head_text h1 {
+  font-weight: bolder;
+  font-size: 40px;
+  padding: 10px;
+  color: black;
+}
+
+.head_text p {
+  font-weight: 300;
+  font-size: 20px;
+  padding: 10px;
+}
