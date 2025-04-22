@@ -1,0 +1,14 @@
+.list {
+    font-size: 19px;
+    display: flex;
+    gap: 10px;
+}
+
+li {
+    list-style: none;
+    color: gray;
+}
+
+li:nth-child(1) {
+    color: white;
+}

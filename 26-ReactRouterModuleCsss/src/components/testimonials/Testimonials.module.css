@@ -1,0 +1,28 @@
+.testimonials {
+    padding: 100px 0;
+}
+
+.test_area {
+  text-align: center;
+}
+
+.test_area h1 {
+  font-weight: bolder;
+  font-size: 40px;
+  padding: 10px;
+  color: black;
+}
+
+.test_area p {
+  font-weight: 300;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.testim_comments {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
