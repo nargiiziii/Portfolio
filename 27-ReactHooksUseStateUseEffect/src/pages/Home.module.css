@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #f8b8c8, #f9c7d6);
+  font-family: "Poppins", sans-serif;
+  color: #4a3d56;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counterBox,
+.inputSection {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 32px 40px;
+  margin-bottom: 32px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.counterBox:hover,
+.inputSection:hover {
+  transform: translateY(-5px);
+}
+
+.counterBox h1,
+.inputSection h2 {
+  margin-bottom: 16px;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.button {
+  background: linear-gradient(135deg, #ff7ac1, #ffb3e6);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2), 0 0 8px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #ff61a6, #ff91d1);
+  transform: scale(1.05);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+.input {
+  padding: 12px 18px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 16px;
+  width: 160px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.9);
+  color: #6a4d75;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #ff7ac1, 0 0 15px rgba(255, 105, 180, 0.4);
+}
+
+/* inputun default artirmaq ve azaltmaq buttonlarini yigisdirmaq ucun */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
