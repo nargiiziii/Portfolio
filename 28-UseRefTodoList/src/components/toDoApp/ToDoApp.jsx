@@ -10,10 +10,12 @@ const toDoApp = () => {
     JSON.parse(localStorage.getItem("tasks")) || []
   );
 
+
   //edit yeri ucun
   const [edit, setEdit] = useState(false);
   const [currentTask, setCurrentTask] = useState(null);
 
+  //task elave etmek ucun arrow function:
   let addTask = (e) => {
     e.preventDefault();
     let taskText = inputRef.current.value.trim();
@@ -40,6 +42,7 @@ const toDoApp = () => {
     inputRef.current.value = "";
   };
 
+//delete ucun arrow function:
   let deleteTask = (id) => {
     let findTaskIndex = tasks.findIndex((task) => task.id == id);
     tasks.splice(findTaskIndex, 1);
@@ -48,6 +51,7 @@ const toDoApp = () => {
     toast("task removed!!");
   };
 
+//edit ucun arrow function:
   let editTask = (taskItem) => {
     setEdit(true);
     setCurrentTask(taskItem);
@@ -73,6 +77,7 @@ const toDoApp = () => {
     toast("task edited!!");
   };
 
+  //taskin statusunu deyismek ucun(true yada false edirem ki sonra chekboxda isledim red ve green etmek ucun tasklari)
   let taskStatus = (id) => {
     let updatedTasks = tasks.map((task) =>
       task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
@@ -81,6 +86,7 @@ const toDoApp = () => {
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
 
+  //delete all eden arrow function:
   let deleteAllTasks = () => {
     setTasks([]);
     localStorage.setItem("tasks", JSON.stringify(tasks));
