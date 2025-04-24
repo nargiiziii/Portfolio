@@ -1,0 +1,80 @@
+.to_do_app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    background-color: pink;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.add_task form{
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     padding: 10px;
+     width: 500px;
+     border-radius: 10px;
+     background-color: rgb(233, 174, 184);
+}
+
+.edit_task form{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: rgb(230, 142, 156);
+}
+
+
+button {
+    padding: 10px;
+    background-color: rgb(221, 119, 136);
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+input {
+    padding: 10px;
+    background-color: rgb(244, 213, 218);
+    border: 1px solid aliceblue;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+}
+
+ul {
+    margin: 20px 0;
+    background-color: rgb(233, 174, 184);
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+li {
+    list-style: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(244, 213, 218);
+}
+
+
+.my_toast {
+    background-image: linear-gradient(to right, rgba(231, 200, 220, 0.803),rgba(235, 135, 187, 0.803));
+    color: rgb(205, 22, 141);
+    border-radius: 8px;
+  }
+  
