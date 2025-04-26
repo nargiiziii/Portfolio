@@ -116,13 +116,13 @@ const AdminPanel = () => {
             <div className={style.actionButtons}>
               <button
                 onClick={() => deleteUser(userItem.id)}
-                className={`${style.button} ${style.deleteButton}`}
+                className={`${style.button}`}
               >
                 delete
               </button>
               <button
                 onClick={() => editUser(userItem)}
-                className={`${style.button} ${style.editButton}`}
+                className={`${style.button}`}
               >
                 edit
               </button>
@@ -133,7 +133,7 @@ const AdminPanel = () => {
 
       <button
         onClick={resetUsers}
-        className={`${style.button} ${style.resetButton}`}
+        className={`${style.button}`}
       >
         reset
       </button>
