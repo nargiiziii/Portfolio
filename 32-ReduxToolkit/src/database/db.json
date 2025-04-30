@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "93a7a93e-a21e-dece-eaa7-b618019a2c14",
+      "name": "Nargiz",
+      "surname": "Ibrahimli",
+      "email": "nargiz@gmail.com",
+      "password": "12345678",
+      "confirmPass": "12345678",
+      "isLogined": false
+    }
+  ]
+}
