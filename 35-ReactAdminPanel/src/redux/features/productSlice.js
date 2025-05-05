@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const baseUrl = "http://localhost:3000/products";
 
@@ -52,16 +53,19 @@ export const productSlice = createSlice({
     });
     builder.addCase(createProducts.fulfilled, (state, action) => {
       state.allProducts.push(action.payload);
+      toast("created new product!!")
     });
     builder.addCase(deleteProducts.fulfilled, (state, action) => {
       state.allProducts = state.allProducts.filter(
         (prod) => prod.id !== action.payload
       );
+      toast("product deleted!!")
     });
     builder.addCase(updateProducts.fulfilled, (state, action) => {
       state.allProducts = state.allProducts.map((prod) =>
         prod.id === action.payload.id ? action.payload : prod
       );
+      toast("product edited!!")
     });    
   },
 });

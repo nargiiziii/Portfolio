@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "1",
-      "title": "Fjallravdsdsdsdsden - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "title": "Fjallravdsdsdsdsden - Folddsssack No. 1 Backpack, Fits 15 Laptops",
       "price": 109.95,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothinggddg",
@@ -239,6 +239,13 @@
         "rate": 3.6,
         "count": 145
       }
+    },
+    {
+      "id": "c20d",
+      "image": "https://picsum.photos/200/300",
+      "title": "fdf",
+      "category": "fdg",
+      "price": "45"
     }
   ]
 }
