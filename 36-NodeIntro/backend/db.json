@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Amina",
+      "surname": "Aliyeva",
+      "age": 20,
+      "isStudent": true
+    },
+    {
+      "id": "b1bbd8bc-c6f1-4b33-a9d2-297cc71ccdab",
+      "name": "Nargiz",
+      "surname": "Ibrahimli",
+      "age": 20,
+      "isStudent": true
+    },
+    {
+      "id": "48e1ceaf-d699-4cdf-8990-74f8c02fca3c",
+      "name": "Mehemmed",
+      "surname": "Ibrahimli",
+      "age": 18,
+      "isStudent": true
+    },
+    {
+      "id": "6391e5c7-e13c-4188-ba8a-3d9c063b3446",
+      "name": "Kamran",
+      "surname": "Ibrahimov",
+      "age": 48,
+      "isStudent": false
+    },
+    {
+      "id": "d6234037-27a8-472d-b4e6-e7ea172c96f0",
+      "name": "Nigar",
+      "surname": "Ibrahimova",
+      "age": 40,
+      "isStudent": false
+    },
+    {
+      "id": "8e43fd3c-50c5-4c41-8aff-676836b0ec22",
+      "name": "Leyla",
+      "surname": "Javanshirova",
+      "age": 24,
+      "isStudent": true
+    }
+  ]
+}
